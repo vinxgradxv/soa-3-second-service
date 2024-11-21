@@ -26,7 +26,7 @@ public class BandsController {
     @Autowired
     MainServerClientService client;
 
-    @GetMapping(value = "/bands/get-by-genre/{genre}", produces = "application/xml")
+    @GetMapping(value = "/second/bands/get-by-genre/{genre}", produces = "application/xml")
     @SneakyThrows
     public List<MusicBand> getBandsByGenre(@PathVariable MusicGenre genre) {
         var responseFromMainService = client.get("/api/music-bands/all");
@@ -40,7 +40,7 @@ public class BandsController {
         return res;
     }
 
-    @PostMapping(value = "/band/{band-id}/nominate/{genre}", produces = "application/xml")
+    @PostMapping(value = "/second/band/{band-id}/nominate/{genre}", produces = "application/xml")
     public NominationResponse nominateBand(@PathVariable("band-id") Long bandId, @PathVariable("genre") MusicGenre genre) {
 
         try {
