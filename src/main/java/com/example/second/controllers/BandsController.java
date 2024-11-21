@@ -16,7 +16,7 @@ import org.springframework.web.client.RestClient;
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+@RestController()
 @CrossOrigin("*")
 public class BandsController {
 
